@@ -1,0 +1,68 @@
+<Playlist Version="2.0">
+  <Rule Name="Includes" Match="Any">
+    <Rule Match="All">
+      <Property Name="Solution" />
+      <Rule Match="Any">
+        <Rule Match="All">
+          <Property Name="Project" Value="TestingProject" />
+          <Rule Match="Any">
+            <Rule Match="All">
+              <Property Name="Namespace" Value="TestingProject.ProductControlers" />
+              <Rule Match="Any">
+                <Rule Match="All">
+                  <Property Name="Class" Value="Product_Create" />
+                  <Rule Match="Any">
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="TestingProject.ProductControlers.Product_Create.CreateProduct_EmptyName_ShouldFail" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="CreateProduct_EmptyName_ShouldFail" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="TestingProject.ProductControlers.Product_Create.CreateProduct_NegativePrice_ShouldFail" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="CreateProduct_NegativePrice_ShouldFail" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="TestingProject.ProductControlers.Product_Create.CreateProduct_ValidData_ShouldSucceed" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="CreateProduct_ValidData_ShouldSucceed(&quot;Laptop&quot;,&quot;Electronics&quot;,999.99d)" />
+                        <Property Name="DisplayName" Value="CreateProduct_ValidData_ShouldSucceed(&quot;Coffee Mug&quot;,&quot;Kitchen&quot;,15.5d)" />
+                      </Rule>
+                    </Rule>
+                  </Rule>
+                </Rule>
+                <Rule Match="All">
+                  <Property Name="Class" Value="Product_Search" />
+                  <Rule Match="Any">
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="TestingProject.ProductControlers.Product_Search.SearchProducts_ByCategory_ShouldReturnOnlyProductsInCategory" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="SearchProducts_ByCategory_ShouldReturnOnlyProductsInCategory" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="TestingProject.ProductControlers.Product_Search.SearchProducts_ByName_ShouldReturnExpectedCount" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="SearchProducts_ByName_ShouldReturnExpectedCount(&quot;laptop&quot;,2)" />
+                        <Property Name="DisplayName" Value="SearchProducts_ByName_ShouldReturnExpectedCount(&quot;coffee&quot;,1)" />
+                        <Property Name="DisplayName" Value="SearchProducts_ByName_ShouldReturnExpectedCount(&quot;nonexistent&quot;,0)" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="TestingProject.ProductControlers.Product_Search.SearchProducts_ByPriceRange_ShouldReturnProductsInRange" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="SearchProducts_ByPriceRange_ShouldReturnProductsInRange" />
+                      </Rule>
+                    </Rule>
+                  </Rule>
+                </Rule>
+              </Rule>
+            </Rule>
+          </Rule>
+        </Rule>
+      </Rule>
+    </Rule>
+  </Rule>
+</Playlist>

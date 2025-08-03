@@ -1,0 +1,114 @@
+<Playlist Version="2.0">
+  <Rule Name="Includes" Match="Any">
+    <Rule Match="All">
+      <Property Name="Solution" />
+      <Rule Match="Any">
+        <Rule Match="All">
+          <Property Name="Project" Value="TestingProject" />
+          <Rule Match="Any">
+            <Rule Match="All">
+              <Property Name="Namespace" Value="TestingProject.UserControlers" />
+              <Rule Match="Any">
+                <Rule Match="All">
+                  <Property Name="Class" Value="User_Create" />
+                  <Rule Match="Any">
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="TestingProject.UserControlers.User_Create.CreateUser_InvalidEmail_ShouldFail" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="CreateUser_InvalidEmail_ShouldFail" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="TestingProject.UserControlers.User_Create.CreateUser_ValidData_ShouldSucceed" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="CreateUser_ValidData_ShouldSucceed(&quot;jane.smith@email.com&quot;,&quot;Jane&quot;,&quot;Smith&quot;)" />
+                        <Property Name="DisplayName" Value="CreateUser_ValidData_ShouldSucceed(&quot;john.doe@email.com&quot;,&quot;John&quot;,&quot;Doe&quot;)" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="TestingProject.UserControlers.User_Create.CreateUser_WeakPassword_ShouldFail" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="CreateUser_WeakPassword_ShouldFail" />
+                      </Rule>
+                    </Rule>
+                  </Rule>
+                </Rule>
+                <Rule Match="All">
+                  <Property Name="Class" Value="User_ForcePasswordChange" />
+                  <Rule Match="Any">
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="TestingProject.UserControlers.User_ForcePasswordChange.ForcePasswordChange_SameAsCurrentPassword_ShouldFail" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="ForcePasswordChange_SameAsCurrentPassword_ShouldFail" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="TestingProject.UserControlers.User_ForcePasswordChange.ForcePasswordChange_ValidNewPassword_ShouldSucceed" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="ForcePasswordChange_ValidNewPassword_ShouldSucceed" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="TestingProject.UserControlers.User_ForcePasswordChange.ForcePasswordChange_WeakPassword_ShouldFail" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="ForcePasswordChange_WeakPassword_ShouldFail" />
+                      </Rule>
+                    </Rule>
+                  </Rule>
+                </Rule>
+                <Rule Match="All">
+                  <Property Name="Class" Value="User_GeneralInfo" />
+                  <Rule Match="Any">
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="TestingProject.UserControlers.User_GeneralInfo.GetUserInfo_NonExistentUser_ShouldReturnNull" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="GetUserInfo_NonExistentUser_ShouldReturnNull" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="TestingProject.UserControlers.User_GeneralInfo.GetUserInfo_ValidUserId_ShouldReturnUserData" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="GetUserInfo_ValidUserId_ShouldReturnUserData" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="TestingProject.UserControlers.User_GeneralInfo.UpdateUserInfo_ValidData_ShouldUpdateSuccessfully" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="UpdateUserInfo_ValidData_ShouldUpdateSuccessfully" />
+                      </Rule>
+                    </Rule>
+                  </Rule>
+                </Rule>
+                <Rule Match="All">
+                  <Property Name="Class" Value="User_Login" />
+                  <Rule Match="Any">
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="TestingProject.UserControlers.User_Login.Login_AccountLocked_ShouldReturnLockoutError" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Login_AccountLocked_ShouldReturnLockoutError" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="TestingProject.UserControlers.User_Login.Login_MultipleFailedAttempts_ShouldLockAccount" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Login_MultipleFailedAttempts_ShouldLockAccount" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="TestingProject.UserControlers.User_Login.Login_VariousCredentials_ShouldReturnExpectedResult" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Login_VariousCredentials_ShouldReturnExpectedResult(&quot;user@test.com&quot;,&quot;correctpassword&quot;,True)" />
+                        <Property Name="DisplayName" Value="Login_VariousCredentials_ShouldReturnExpectedResult(&quot;user@test.com&quot;,&quot;wrongpassword&quot;,False)" />
+                        <Property Name="DisplayName" Value="Login_VariousCredentials_ShouldReturnExpectedResult(&quot;nonexistent@test.com&quot;,&quot;anypassword&quot;,False)" />
+                      </Rule>
+                    </Rule>
+                  </Rule>
+                </Rule>
+              </Rule>
+            </Rule>
+          </Rule>
+        </Rule>
+      </Rule>
+    </Rule>
+  </Rule>
+</Playlist>
